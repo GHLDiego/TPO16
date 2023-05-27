@@ -99,6 +99,265 @@ body {
     justify-content: center;
 }
 
+.pie_pag_align {
+    text-align: center;
+    margin-left:0px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-left:0px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:350px; 
+}
+.pie_pag_align ul{
+    text-align: center;
+    
+}
+
+.main{
+    /*height: calc(100vh - 7rem);*/
+    height: 600px;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    /*animation-name: bg-image;
+    animation-duration: 30s; 
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;*/
+}
+
+@keyframes bg-image{
+    0%{
+        background-position: left
+    }
+
+    100%{
+        background-position: right;
+    }
+}
+.main div{
+    background: rgba(0,0,0,0.5);
+    border-radius: 30px;
+    color: white;
+    margin-right:100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    }
+.main h3{
+    text-align:right;
+    margin-right: 50px;
+}
+.main h2{
+    text-align:right;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.main_nosotros{
+    height: 600px;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    
+    background-repeat: no-repeat;
+    background-size:850px;
+    background-position: top;
+}
+.main_nosotros h1{
+    font-size: 50px;
+    border-bottom: 6px solid #2daae1;
+    color: #2daae1;
+    margin-bottom: 10px;
+}
+.main_nosotros>div {
+    width:100%;
+    margin-left:20px;
+    margin-right:20px;
+}
+.main_nosotros .large{
+    font-size: x-large;
+}
+.main_nosotros .medium{
+    font-size: medium;
+    color: #808080;
+}
+.Ix-servicios .imagen{
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: top;
+    width:50%
+}
+.Ix-servicios h1{
+    text-align: center;
+}
+.Ix-cont {
+    display:flex; 
+    flex-direction: row;
+}
+.Ix-parrafo {
+    width:50%;
+    height:400px;
+    display:flex;
+    /*justify-content: flex-end;*/
+    align-items: center;
+    overflow: hidden;
+}
+.Ix-parrafo p{
+    width:300px; 
+    font-size: larger;
+    /*margin-right: 100px;*/
+
+}
+.TR_IL{
+    justify-content: flex-end;
+}
+.TR_IL p{
+    margin-right:20px;
+}
+.TR_IR{
+    justify-content: flex-start;
+}
+.TR_IR p{
+    margin-left:20px;
+}
+.servicios_cont{
+    display:flex; 
+    flex-direction: row;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+    flex-wrap: wrap;
+    justify-content:space-around ;
+
+}
+.servicios_cont_items{
+    width:400px;
+    height:450px;
+    display:flex;
+    flex-direction:column; 
+    justify-content:center;
+    align-items: center;
+    margin: 10px;
+
+}
+.servicios_item{
+    border-radius: 30px;
+    width:450px;
+    padding:30px;
+    background: rgb(204,204,204);
+    background: linear-gradient(0deg,
+    rgba(204,204,204,1) 0%,
+    rgba(255,255,255,1) 100%);
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+}
+.servicios_item p{
+    font-size: larger;
+}
+footer{
+    width:100%;
+    background-color:gray;
+    margin-top: 30px;
+}
+footer>div {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color:white;
+    justify-content: space-evenly;
+}
+
+.clientes_cont{
+    background-image: url(../img/back_clientes.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display:flex;flex-direction: column;
+}
+
+.clientes_fila{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+.cli_cont{
+    width:250px;
+    height:300px;
+    background-color: white;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 15px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    transition: border-width 1s;
+}
+.cli_cont:hover{
+    border-width: 10px;
+}
+.cli_cont img{
+    width:230px;
+}
+.cli_cont .empresa{
+    font-weight: bolder;
+}
+.TAC{
+    text-align: center;
+}
+.main_contacto{
+    
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-position: top;
+    padding-top: 200px;
+}
+.main_contacto h1{
+    font-size: 50px;
+    border-bottom: 6px solid #2daae1;
+    color: #2daae1;
+    margin-bottom: 10px;
+}
+.contacto{
+    margin: 0px 50px;
+}
+.contacto input,select,textarea, button{
+    border:solid 2px #aaaaaa;
+    padding:10px;
+    border-radius: 10px;
+    font-size: large;
+    display:block;
+    margin-bottom: 20px;
+}
+.contacto label{
+    display:block
+}
+.contacto button,p{
+    display:inline-block
+}
+.contacto p{
+    margin-left:20px;
+    color:#ff0000;
+    font-weight: bolder;
+}
 @media screen and (min-width: 1280px) {
     .nav-bar {
         background: transparent;
@@ -257,27 +516,46 @@ body {
         top: -12px;
         left: 2rem;
     }
-}
-
-.main{
-    height: calc(100vh - 7rem);
-    background-image: url(../img/bg-main_01.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top;
-    animation-name: bg-image;
-    animation-duration: 30s; 
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-@keyframes bg-image{
-    0%{
-        background-position: left
+    
+    .pie_pag_align {
+    text-align: center;
+    margin-left:0px;
+    padding-left:0px;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    }
+    .pie_pag_align ul{
+        text-align: left;
     }
 
-    100%{
-        background-position: right;
+    .PP-align {
+    align-items: center;
+    }
+    .TR_IL p{
+        margin-right:100px;
+    }
+    .TR_IR p{
+        margin-left:100px;
+    }
+    .main_nosotros{
+        height: 600px;
+        width:100%;
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        
+        background-repeat: no-repeat;
+        background-size:auto;
+        background-position: top;
+    }
+    .main_nosotros>div {
+        width:300px;
+        margin-right: 60%;
+
     }
 }
+
+
+

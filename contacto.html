@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpg" href="public/img/favicon.ico"/>
+    <link rel="stylesheet" href="./public/css/normalize.css" />
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <title>.16 - Contacto</title>
+    <style>
+     footer a:link, footer a:visited, footer a:hover, footer a:active {
+        color: white;
+        text-decoration: none;
+      }
+      </style>
+    <script>
+        let form=null;
+        let log=null;
+        function logSubmit(event) {
+            let email=document.getElementById("email").value;
+            let remail=document.getElementById("remail").value;
+            if (email!==remail){
+                log.textContent = 'El email y su repeticion debe ser ingresado e iguales';
+                setTimeout(()=>log.textContent='', 3000)
+                event.preventDefault();
+            }
+        }
+        window.addEventListener('load',function(event){
+            form = document.getElementById("formulario");
+            log = document.getElementById("form_msg");
+            form.addEventListener("submit", logSubmit);
+        })
+    </script>
+  </head>
+  <body>
+    <header class="bg-header">
+      <div class="container">
+        <nav class="nav">
+          <div class="nav-header">
+            <a href="index.html"><img src="./public/img/logo.png" alt="Logo">
+            </a>
+          </div>
+          <div id="btnMenu" class="nav-button">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div id="mnuNav" class="nav-bar">
+            <ul class="nav-list">
+              <li class="list-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="list-item">
+                <a href="#">Sobre nosotros</a>
+              </li>
+              <li class="list-item dropdown">
+                <a id="btnServicios" class="flex-spacebetween">Servicios <span><i id="iUpDown" class="fa-solid fa-angles-down"></i></span></a>
+                <ul id="subMenu" class="dropdown-menu">
+                  <li class="dropdown-item">
+                    <a href="serv_web.html">Servicios Web</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="marc_digital.html">Marketing Digital</a>
+                  </li>
+                  <li class="dropdown-item">
+                    <a href="web_hosting.html">Web Hosting</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="list-item">
+                <a href="clientes.html">Clientes</a>
+              </li>
+              <li class="list-item">
+                <a href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section >
+        <div class="main_contacto" style="background-image: url(public/img/contactenos.png);">
+            <div class="contacto">
+              
+              <form id="formulario" action="mailto:ventas@tpo16.com.ar">
+              <label for="nombre">Nombre Completo</label>
+              <input id="nombre" name="nombre" type="text" size="50" required >
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" size="50" required>
+              <label for="remail">Repita Email</label>
+              <input id="remail" name="remail" type="email" size="50" required>
+              <label for="area">Area</label>
+              <select id="area"name="area">
+                <option value="Ventas">Ventas</option>
+                <option value="Pagos">Pagos</option>
+                <option value="Diseño">Diseño</option>
+                <option value="Hosting">Hosting</option>
+                <option value="Marketing">Marketing</option>
+              </select>
+              <textarea id="consulta" name="consulta" rows="10" cols="50" required></textarea>
+              <button type="submit">Enviar</button><p id="form_msg"></p>
+            </form>
+              <!--<p class="large">Anclamos a nuestros clientes, al poder de internet</p>
+              <p class="medium">Nos dedicamos especialmente a brindar Servicios y Productos Web para Pymes, Emprendimientos, Consultoras y Profesionales. Por eso es que a estos sectores, desde nuestros primeros días, les respondemos con servicios de alta calidad a costos accesibles, y con rápidos tiempos de entrega.</p>-->
+            </div>
+            <div class="contacto">
+              <h2>Nuestra Ubicacion:</h2>
+              <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-58.405594825744636%2C-34.6223667105433%2C-58.3504056930542%2C-34.59449797360337&amp;layer=mapnik&amp;marker=-34.60843351134589%2C-58.378000259399414" style="border: 1px solid black"></iframe><br/>
+            </div>   
+        </div>       
+      </section>
+
+     
+    </main>
+    <footer>
+      <div>
+        
+        
+        <div class="pie_pag_align">
+            <a href="nosotros.html"><h3>Nosotros</h3></a>
+            <h3>Nuestros Servicios</h3>
+            <ul>
+              <li><a href="serv_web.html">Servicios Web</a></li>
+              <li><a href="marc_digital.html">Marketing Digital</a></li>
+              <li><a href="web_hosting.html">Web Hosting</a></li>
+          </ul>
+            <a href="clientes.html"><h3>Clientes</h3></a>
+            <a href="#"><h3>Contacto</h3></a>
+        </div>
+        <div class="pie_pag_align">
+          <h3>Informacion de Contacto</h3>
+          <p>Tel: 0800-555-1234</p>
+          <p>Cel: 11 1234-5678</p>
+          <p>WApp: 11 6321-9876</p>
+          <P>Email: desarrollo@G16.com.ar</P>
+          <p>Direccion: Lavalle 1234-CABA-CP(AB123G)</p>
+        </div>
+        <div class="pie_pag_align PP-align" >
+            <a href="index.html"><img style="width:150px;" src="public/img/logo_w.png"></a>
+            <div style="display:flex;align-items: center;margin-top: 30px;">
+            <a href="http://instagram.com"><i class="fa fa-instagram fa-2x"  aria-hidden="true"></i></a>
+            <a href="http://facebook.com"><i class="fa fa-facebook-square fa-2x" style="margin-left:30px;" aria-hidden="true"></i></a>
+            <a href="http://twitter.com"><i class="fa fa-twitter-square fa-2x" style="margin-left:30px;" aria-hidden="true"></i></a>
+        </div>
+        </div>
+        
+
+      </div>
+      <div>
+        <p style="text-align:center;">Derechos reservados TPO-G16, comision #23024, Bergmann Javier, Herrera Hector, Rodriguez Diego, Villarroel Diego</p>
+        </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/2dbbc371d1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./public/js/app.js"></script>
+  </body>
+</html>
